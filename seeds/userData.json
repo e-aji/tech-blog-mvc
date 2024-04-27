@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Sophie Bennett",
+        "email": "sophie.bennett@example.com",
+        "password": "4fGh&8*2@"
+    },
+    {
+        "name": "Alex Johnson",
+        "email": "alex.johnson@example.com",
+        "password": "P@ssw0rd!123"
+    },
+    {
+        "name": "Emma Garcia",
+        "email": "emma.garcia@example.com",
+        "password": "Qwerty12#"
+    },
+    {
+        "name": "Michael Lee",
+        "email": "michael.lee@example.com",
+        "password": "s3cUr3P@ss!"
+    }        
+]
