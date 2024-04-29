@@ -1,4 +1,4 @@
-const newFormHandler = async (event) => {
+const newFormHandler = async (event) => { // needs to be in post
     event.preventDefault();
   
     const name = document.querySelector('#project-name').value.trim();
@@ -22,7 +22,7 @@ const newFormHandler = async (event) => {
     }
   };
   
-  const delButtonHandler = async (event) => {
+  const delButtonHandler = async (event) => { // need an edit button handler
     if (event.target.hasAttribute('data-id')) {
       const id = event.target.getAttribute('data-id');
   
