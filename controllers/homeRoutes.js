@@ -34,9 +34,11 @@ router.get('/post/:id', async (req, res) => {
     });
 
     const post = postData.get({ plain: true });
+    const postUser = post.user.get({ plain: true });
 
     res.render('post', {
       ...post,
+      name: req.session.name,
       logged_in: req.session.logged_in
     });
   } catch (err) {

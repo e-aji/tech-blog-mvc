@@ -1,23 +1,37 @@
 [
     {
-        "body": "Brilliant article! Really enjoyed reading it. Can't wait for more content like this"
+        "body": "Brilliant article! Really enjoyed reading it. Can't wait for more content like this",
+        "user_id": 1,
+        "post_id": 2
     },
     {
-        "body": "This topic is fascinating. I learned a lot from this post. Thanks for sharing!"
-    }, 
+        "body": "This topic is fascinating. I learned a lot from this post. Thanks for sharing!",
+        "user_id": 2,
+        "post_id": 4
+    },
     {
-        "body": "I love this article! I can't wait to read more of it."
+        "body": "I love this article! I can't wait to read more of it.",
+        "user_id": 3,
+        "post_id": 2
     },
     { 
-        "body": "Got a bit of a different view on this issue. Think there's more to discuss, like..."
+        "body": "Got a bit of a different view on this issue. Think there's more to discuss, like...",
+        "user_id": 2,
+        "post_id": 5
     },
     {
-        "body": "Nice Work!"
+        "body": "Nice Work!",
+        "user_id": 4,
+        "post_id": 1
     },
     {
-        "body": "I'm excited to read more of this. Thanks for sharing!"
-    }, 
+        "body": "I'm excited to read more of this. Thanks for sharing!",
+        "user_id": 3,
+        "post_id": 3
+    },
     {
-        "body": "Great Read!"
+        "body": "Great Read!",
+        "user_id": 4,
+        "post_id": 3
     }
 ]
