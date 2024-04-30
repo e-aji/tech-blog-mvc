@@ -11,8 +11,8 @@
     {{#each posts as |post|}}
       <li>
         {{> post-details post}}
-        <button class="btn btn-sm btn-danger" data-id="{{post.id}}">Delete Post</button>
-        <button class="btn btn-sm btn-primary" data-id="{{post.id}}">Edit Post</button>
+        <button class="delete-btn" data-id="{{post.id}}">Delete Post</button> 
+        <button class="edit-btn" data-id="{{post.id}}">Edit Post</button> <!-- in JS, link to edit page -->
       </li>
     {{/each}}
     </ul>
@@ -21,3 +21,4 @@
 
 
 <script src="./js/dashboard.js"></script>
+<script src="./js/post.js"></script>

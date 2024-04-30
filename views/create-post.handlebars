@@ -1,3 +1,4 @@
+
 <div class="row mt-4">
   <div class="col-md-6">
     <h3>Create a New Post:</h3>
@@ -8,13 +9,15 @@
         <input class="form-input" type="text" id="post-title" name="post-title" />
       </div>
 
+    {{#if }}
     <div class="form-group">
             <label class="label" for="content">Post Content</label>
-            <input class="form-input" name="content" id="content" />
+            <input class="form-input" name="content" id="post-content" />
     </div>
         <button type="submit" class="btn btn-primary">Create Post</button>
     </form>
   </div>
 </div>
+
 
 <script src="./js/post.js"></script>
