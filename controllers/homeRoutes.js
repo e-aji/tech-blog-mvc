@@ -18,6 +18,7 @@ router.get('/', async (req, res) => {
     // Pass serialized data and session flag into template
     res.render('homepage', { 
       posts, 
+      name: req.session.name,
       logged_in: req.session.logged_in 
     });
   } catch (err) {
@@ -46,19 +47,18 @@ router.get('/post/:id', async (req, res) => {
   }
 });
 
-// Use withAuth middleware to prevent access to route
 router.get('/profile', withAuth, async (req, res) => {
   try {
-    // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
       include: [{ model: Post }],
     });
 
-    const user = userData.get({ plain: true });
+    const posts = postData.get({ plain: true });
 
     res.render('profile', {
-      ...user,
+      posts,
+      user: req.session.user,
       logged_in: true
     });
   } catch (err) {

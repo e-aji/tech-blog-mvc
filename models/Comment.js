@@ -1,5 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
+const { all } = require('../controllers/api/postRoutes');
 
 class Comment extends Model {}
 
@@ -11,8 +12,17 @@ Comment.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    body: {
-      type: DataTypes.STRING,
+    content: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'user',
+        key: 'id'
+      }
     },
     post_id: {
       type: DataTypes.INTEGER,
@@ -20,6 +30,11 @@ Comment.init(
         model: 'post',
         key: 'id',
       },
+    },
+    date_created: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
     },
   },
   {
