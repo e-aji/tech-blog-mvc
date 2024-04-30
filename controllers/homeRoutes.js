@@ -8,7 +8,8 @@ router.get('/', async (req, res) => {
     // Get all posts and JOIN with user data
     const postData = await Post.findAll({
       include: [
-        {model: User}, {model: Comment},
+        {model: User, attributes: ['name']},
+        {model: Comment, attributes: ['id', 'content', 'user_id', 'date_created'], include: [{model: User, attributes: ['name']}]},
       ],
     });
 
@@ -18,7 +19,7 @@ router.get('/', async (req, res) => {
     // Pass serialized data and session flag into template
     res.render('homepage', { 
       posts, 
-      name: req.session.name,
+      // name: req.session.name,
       logged_in: req.session.logged_in 
     });
   } catch (err) {
@@ -30,16 +31,17 @@ router.get('/post/:id', async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {
         include: [
-            {model: User}, {model: Comment},
+            {model: User, attributes: ['name']}, 
+            {model: Comment, attributes: ['id', 'content', 'user_id', 'date_created'], include: [{model: User, attributes: ['name']}]},
         ],
     });
 
     const post = postData.get({ plain: true });
-    const postUser = post.user.get({ plain: true });
+    // const postUser = post.user.get({ plain: true });
 
     res.render('post', {
       ...post,
-      name: req.session.name,
+      // name: req.session.name,
       logged_in: req.session.logged_in
     });
   } catch (err) {
@@ -54,11 +56,10 @@ router.get('/profile', withAuth, async (req, res) => {
       include: [{ model: Post }],
     });
 
-    const posts = postData.get({ plain: true });
+    const user = userData.get({ plain: true });
 
     res.render('profile', {
-      posts,
-      user: req.session.user,
+      ...user,
       logged_in: true
     });
   } catch (err) {

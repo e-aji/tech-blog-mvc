@@ -61,6 +61,7 @@ The aim of this project is to create a
 * Sequelize
 * Handlebars.js 
 * MVC architecture
+* PostgreSQL
 
 ## Links 
 

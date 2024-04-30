@@ -11,7 +11,7 @@ router.get('/', withAuth, async (req, res) => {
 
         res.status(200).json(postData);
     } catch (err) {
-        res.status(500).json(err);
+      res.status(500).json({ error: "Failed to fetch posts." });
     }
 });
 
@@ -25,20 +25,20 @@ router.get('/:id', withAuth, async (req, res) => {
         if (!postData) {
           res
             .status(404)
-            .json({ message: "No post has been found with that id!" });
+            .json({ message: "No post found with this id!" });
           return;
         }
 
         res.status(200).json(postData);
       } catch (err) {
-        res.status(500).json(err);
+        res.status(500).json({ error: "Failed to fetch posts." });
       }
     });
 
 // Update a post by its `id` value
 router.put("/:id", withAuth, async (req, res) => {
   try {
-      const updatePost = await Post.update(
+      const postData = await Post.update(
           {
               title: req.body.title,
               body: req.body.body,
@@ -50,10 +50,15 @@ router.put("/:id", withAuth, async (req, res) => {
               },
           }
       );
-      res.status(200).json(updatePost); 
-  } catch (err) {
-      res.status(400).json(err);
-  }
+      if (!updatePost[0]) {
+        res.status(404).json({ error: "No post found with this id!" });
+        return;
+    }
+
+    res.status(200).json({ message: "Post updated successfully." }); 
+} catch (err) {
+    res.status(400).json({ error: "Failed to update post." });
+}
 });
 
 // Create a new post
@@ -67,7 +72,7 @@ router.post('/', withAuth, async (req, res) => {
 
       res.status(200).json(newPost);
     } catch (err) {
-      res.status(400).json(err);
+      res.status(400).json({ error: "Failed to create post." });
     }
 
   });
@@ -76,20 +81,20 @@ router.post('/', withAuth, async (req, res) => {
 // Delete a post by its `id` value
 router.delete('/:id', withAuth, async (req, res) => {
     try {
-      const deletePost = await Post.destroy({
+      const postData = await Post.destroy({
         where: {
           id: req.params.id,
         },
       });
   
-      if (!deletePost) {
-        res.status(404).json({ message: 'No post found with this id!' });
+      if (!postData) {
+        res.status(404).json({ error: 'No post found with this id!' });
         return;
       }
   
-      res.status(200).json(deletePost);
+      res.status(200).json({ message: "Post deleted successfully." });
     } catch (err) {
-      res.status(500).json(err);
+        res.status(500).json({ error: "Failed to delete post." });
     }
   });
 

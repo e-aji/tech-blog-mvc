@@ -2,20 +2,20 @@
 const newFormHandler = async (event) => { 
     event.preventDefault();
   
-    const title = document.querySelector('#post-title').value.trim();
-    const post_content = document.querySelector('#post-content').value.trim();
+    const title = document.querySelector('#title').value.trim();
+    const body = document.querySelector('#body').value.trim();
   
-    if (name && needed_funding && description) {
+    if (title && body) {
       const response = await fetch(`/api/posts`, {
         method: 'POST',
-        body: JSON.stringify({ title, post_content, description }),
+        body: JSON.stringify({ title, body }),
         headers: {
           'Content-Type': 'application/json',
         },
       });
   
       if (response.ok) {
-        document.location.replace('/posts');
+        document.location.replace('/profile');
       } else {
         alert('Failed to create new post');
       }
@@ -33,7 +33,7 @@ const newFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.reload();;
+        document.location.replace('/profile');;
       } else {
         alert('Failed to delete post');
       }
@@ -72,5 +72,5 @@ document
 .addEventListener('click', delButtonHandler);
 
 document
-.querySelector('.post-list') // change name //
+.querySelector('.edit-post-form') 
 .addEventListener('submit', editButtonHandler);
