@@ -4,9 +4,11 @@ const newFormHandler = async (event) => {
   
     const title = document.querySelector('#title').value.trim();
     const body = document.querySelector('#body').value.trim();
-  
+    
     if (title && body) {
-      const response = await fetch(`/api/posts`, {
+      console.log(title, body);
+      const response = await fetch(`/api/post`, 
+      {
         method: 'POST',
         body: JSON.stringify({ title, body }),
         headers: {
@@ -68,9 +70,9 @@ document
 .addEventListener('submit', newFormHandler);
 
 document
-.querySelector('#delete-btn') 
+.querySelector('.post-list') 
 .addEventListener('click', delButtonHandler);
 
-document
-.querySelector('.edit-post-form') 
-.addEventListener('submit', editButtonHandler);
+// document
+// .querySelector('.edit-post-form') 
+// .addEventListener('submit', editButtonHandler);

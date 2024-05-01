@@ -10,12 +10,12 @@
 
     <form class="form new-post-form">
       <div class="form-group">
-        <label for="post-title">Post Title:</label>
+        <label for="post-title"> Title:</label>
         <input class="form-input" type="text" id="title" name="post-title" />
       </div>
 
     <div class="post-body">
-            <label class="label" for="body">Post Content</label>
+            <label class="label" for="body">Content</label>
             <input class="form-input" name="body" id="body" />
     </div>
         <button type="submit" class="btn btn-primary">Create Post</button>
@@ -23,23 +23,23 @@
   </div>
 </div>
 
-  {{#if post.length}}
   <div class="col-md-6 post-list">
+
+  {{#if post.length}}
     <h3>Current Posts:</h3>
+
     {{#each posts as |post|}}
       
     <div class="text-center">
       <div class="post">
-          <h2 class="post-title"><a class="link" href="/post/{{id}}">{{title}}</a></h2>
+          <h2> <a href="/post/{{post.id}}">{{post.title}}</a></h2>
           <p>Created by: {{user.name}} on {{format_date date_created}}</p>
           <p class="post-body">{{body}}</p>
       </div>
-      
     <div class="col-md-6">
         <button class="delete-btn" data-id="{{post.id}}">Delete Post</button> 
-        <button class="edit-btn" data-id="{{post.id}}">Edit Post</button> <!-- in JS, link to edit page -->
+        <button class="edit-btn" data-id="{{post.id}}">Edit Post</button> 
        </div>  
-    </div>
 
     {{/each}}
   </div>

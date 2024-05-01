@@ -1,12 +1,12 @@
 [
     {
         "title": "Front End Languages: A Beginner's Guide",
-        "body": "So, you want to dive into the world of front-end development? Understanding the key front-end languages is essential. We'll be exploring the fundamentals of HTML, CSS, and JavaScript, and how they come together to create stunning web experiences!",
+        "body": "So, you want to dive into the world of front-end development? Understanding the key front-end languages is essential. We'll be exploring the fundamentals of HTML, CSS, and JavaScript!",
         "user_id": 1
     },
     {
         "title": "Mastering Back-End Languages: A Deep Dive",
-        "body": "Ready to level up your back-end skills? In this post, we'll take a deep dive into the world of back-end languages, exploring their inner workings and practical applications. From server-side scripting with PHP to building robust applications with Java, we'll cover it all.",
+        "body": "Ready to level up your back-end skills? In this post, we'll take a deep dive into the world of back-end languages, exploring their inner workings and practical applications.",
         "user_id": 2
     },
     {
@@ -16,7 +16,7 @@
     }, 
     {
         "title": "The Full-Stack Developer's Toolkit: A Comprehensive Guide",
-        "body": "Ready to become a master of both front-end and back-end development? In this post, we'll equip you with the tools and techniques you need to succeed as a full-stack developer. From mastering front-end languages like HTML, CSS, and JavaScript to diving into back-end technologies like Node.js, Python, and more, we'll cover it all.",
+        "body": "Ready to become a master of both front-end and back-end development? In this post, we'll equip you with the tools and techniques you need to succeed as a full-stack developer. ",
         "user_id": 4
 
     }, 

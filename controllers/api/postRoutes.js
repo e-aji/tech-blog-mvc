@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Post, User, Comment } = require('../../models');
+const { Post, Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // Get all posts
@@ -16,7 +16,7 @@ router.get('/', withAuth, async (req, res) => {
 });
 
 // Get a single post
-router.get('/:id', withAuth, async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
     try {
         const postData = await Post.findByPk(req.params.id, {
           include: [{ model: Comment }],
@@ -35,25 +35,24 @@ router.get('/:id', withAuth, async (req, res) => {
       }
     });
 
-// Update a post by its `id` value
-router.put("/:id", withAuth, async (req, res) => {
+// Update a post 
+router.put("/", withAuth, async (req, res) => {
   try {
       const postData = await Post.update(
           {
               title: req.body.title,
               body: req.body.body,
-              user_id: req.session.user_id,
           },
           {
               where: {
-                  id: req.params.id,
+                  user_id: req.params.user_id,
               },
           }
       );
-      if (!updatePost[0]) {
-        res.status(404).json({ error: "No post found with this id!" });
-        return;
-    }
+    //   if (!updatePost[0]) {
+    //     res.status(404).json({ error: "No post found with this id!" });
+    //     return;
+    // }
 
     res.status(200).json({ message: "Post updated successfully." }); 
 } catch (err) {
@@ -64,6 +63,8 @@ router.put("/:id", withAuth, async (req, res) => {
 // Create a new post
 router.post('/', withAuth, async (req, res) => {
    try { 
+    console.log(req.body)
+    
     const newPost = await Post.create({
       title: req.body.title,
       body: req.body.body,
@@ -72,6 +73,8 @@ router.post('/', withAuth, async (req, res) => {
 
       res.status(200).json(newPost);
     } catch (err) {
+      console.log(err)
+
       res.status(400).json({ error: "Failed to create post." });
     }
 
@@ -84,6 +87,7 @@ router.delete('/:id', withAuth, async (req, res) => {
       const postData = await Post.destroy({
         where: {
           id: req.params.id,
+          user_id: req.session.user_id
         },
       });
   

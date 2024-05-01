@@ -3,16 +3,11 @@ const { User } = require('../../models');
 
 router.post('/', async (req, res) => {
   try {
-    const userData = await User.create({
-      name: req.body.name,
-      email: req.body.email,
-      password: req.body.password
-
-    });
-
+    const userData = await User.create(req.body);
+    
     req.session.save(() => {
       req.session.user_id = userData.id;
-      req.session.name = userData.name;
+      // req.session.name = userData.name;
       req.session.logged_in = true;
 
       res.status(200).json(userData);
@@ -24,7 +19,7 @@ router.post('/', async (req, res) => {
 
 router.post('/login', async (req, res) => {
   try {
-    const userData = await User.findOne({ where: { name: req.body.name } });
+    const userData = await User.findOne({ where: { email: req.body.email } });
 
     if (!userData) {
       res
@@ -33,7 +28,7 @@ router.post('/login', async (req, res) => {
       return;
     }
 
-    const validPassword = await userData.checkPassword(req.body.password);
+    const validPassword = userData.checkPassword(req.body.password);
 
     if (!validPassword) {
       res
@@ -44,7 +39,7 @@ router.post('/login', async (req, res) => {
 
     req.session.save(() => {
       req.session.user_id = userData.id;
-      req.session.name = userData.name;
+      // req.session.name = userData.name;
       req.session.logged_in = true;
       
       res.json({ user: userData, message: 'You are now logged in!' });
