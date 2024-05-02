@@ -25,7 +25,7 @@
 
   <div class="col-md-6 post-list">
 
-  {{#if post.length}}
+  {{#if posts.length}}
     <h3>Current Posts:</h3>
 
     {{#each posts as |post|}}
@@ -38,7 +38,7 @@
       </div>
     <div class="col-md-6">
         <button class="delete-btn" data-id="{{post.id}}">Delete Post</button> 
-        <button class="edit-btn" data-id="{{post.id}}">Edit Post</button> 
+        <a href="/post/{{post.id}}/edit" class="edit-btn">Edit Post</a> 
        </div>  
 
     {{/each}}
