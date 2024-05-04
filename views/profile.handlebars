@@ -23,26 +23,26 @@
   </div>
 </div>
 
-  <div class="col-md-6 post-list">
+  <div class="col-md-10 center post-list">
 
   {{#if posts.length}}
-    <h3>Current Posts:</h3>
+    <h3>Current Posts</h3>
 
     {{#each posts as |post|}}
       
     <div class="text-center">
       <div class="post">
           <h2> <a href="/post/{{post.id}}">{{post.title}}</a></h2>
-          <p>Created by: {{user.name}} on {{format_date date_created}}</p>
+          <p class="post-create">Created on {{format_date date_created}}</p>
           <p class="post-body">{{body}}</p>
       </div>
-    <div class="col-md-6">
-        <button class="delete-btn" data-id="{{post.id}}">Delete Post</button> 
-        <a href="/post/{{post.id}}/edit" class="edit-btn">Edit Post</a> 
+    <div class="col-md-12">
+        <button class="btn btn-primary" data-id="{{post.id}}">Delete Post</button> 
+        <a href="/post/{{post.id}}/edit" class="edit btn btn-primary">Edit Post</a> 
        </div>  
-
-    {{/each}}
   </div>
+    {{/each}}
   {{/if}}
+</div>
 
 <script src="./js/post.js"></script>

@@ -420,13 +420,13 @@ button {
 }
 
 a {
-  color: #1b89bc;
+  color: #2d3e50;
   text-decoration: none;
 }
 
 a:hover {
   color: #065b83;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 /* HEIGHT / WIDTH UTILS */
@@ -1011,6 +1011,7 @@ a:hover {
 .btn.btn-primary {
   background-color: #2d3e50;
   color: #d9e9e8;
+  margin-top: 8px;
 }
 
 .btn.btn-primary:hover {

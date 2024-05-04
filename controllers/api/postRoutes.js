@@ -67,7 +67,6 @@ router.post("/", withAuth, async (req, res) => {
     console.log(req.body);
 
     const newPost = await Post.create({
-      // throwing an errow
       title: req.body.title,
       body: req.body.body,
       user_id: req.session.user_id,
@@ -89,11 +88,6 @@ router.delete("/:id", withAuth, async (req, res) => {
         id: req.params.id,
         user_id: req.session.user_id,
       },
-    });
-
-    console.log({
-      id: req.params.id,
-      user_id: req.session.user_id,
     });
 
     if (!postData) {

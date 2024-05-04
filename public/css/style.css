@@ -1,5 +1,21 @@
 header, .project:not(:last-child) {
-  border-bottom: 1px solid #ccc;
+  border: 20px solid #2d3e50;
+  background-color: #2d3e50; 
+  margin-bottom: 20px;
+
+}
+
+header a {
+  color: #fff;
+}
+
+nav {
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+header a:hover {
+  color: #ccc;
 }
 
 .no-button {
@@ -7,12 +23,118 @@ header, .project:not(:last-child) {
   border: none;
   padding: 0;
   cursor: pointer;
-  color: #1b89bc;
+  color: #fff;
   text-decoration: none;
   font-size: 100%;
 }
 
 .no-button:hover {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.post {
+  margin-top: 30px;
+}
+
+.post-page-details {
+  font-size: 15px;
+  color: #1e3658;
+  margin-bottom: 20px ;
+
+}
+
+.post h2 {
+  font-size: 27px;
+  font-style: bold;
   color: #065b83;
+  margin-bottom: 10px;
+
+}
+
+.post-info {
+  color: #1e3658;
+  font-size: 15px;
+}
+
+.post-create{
+  color: #1e3658;
+  font-size: 15px;
+}
+
+.com {
+  font-size: 30px;
+  margin-top: 40px;
+}
+
+.comments{
+  margin: 20px;
+
+}
+
+.comment-input {
+  display: block;
+  width: 50%;
+  min-width: 200px;
+  padding: 0.75rem;
+  color: #1a1a1a;
+  background-color: #ffffff;
+  margin: 0.625rem auto; 
+  font-size: 1.2rem;
+  border: 1px solid #484848;
+  border-radius: 0.3rem;
+}
+
+.new-comment {
+  font-size: 19px;
+  margin-top: 20px;
+  font-weight: 500;
   text-decoration: underline;
+  color: #1e3658;
+}
+
+.author{
+  color: #1e3658;
+  font-size: 15px;
+}
+
+.post-list {
+  padding: 20px;
+  border: 0.5px solid #065b83;
+  border-radius: 7px;
+
+}
+
+.center {
+  margin: auto;
+  margin-top: 50px;
+  width: 80%;
+  padding: 10px
+}
+
+.post-list h3 {
+  font-size: 40px;
+  text-align: center;
+  color: #065b83;
+  font-style: bold;
+  margin-bottom: 5px;
+} 
+
+.post-title {
+  color: pink;
+  font-size: 20px;
+}
+
+#logout {
+  font-weight: 500;
+  font-style: italic;
+}
+
+#logout:hover {
+  color: #73a9e3;
+  text-decoration: underline;
+}
+
+footer{
+  margin: 20px;
 }
