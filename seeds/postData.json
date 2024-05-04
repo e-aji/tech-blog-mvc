@@ -1,28 +1,28 @@
 [
     {
         "title": "Front End Languages: A Beginner's Guide",
-        "body": "So, you want to dive into the world of front-end development? Understanding the key front-end languages is essential. We'll be exploring the fundamentals of HTML, CSS, and JavaScript!",
+        "body": "So, you want to dive into the world of front-end development? Understanding the key front-end languages is essential. We'll be exploring the fundamentals of HTML, CSS, and JavaScript! HTML, or HyperText Markup Language, forms the backbone of any web page. It provides the structure for your content, allowing you to define headings, paragraphs, images, and other elements.CSS, or Cascading Style Sheets, is what gives your HTML structure its style. With CSS, you can control the layout, colors, fonts, and overall appearance of your web pages, ensuring they look polished and professional. JavaScript is the language of interactivity on the web. With JavaScript, you can add dynamic behavior to your websites, such as responding to user input, manipulating the DOM (Document Object Model), and making asynchronous requests to servers.",
         "user_id": 1
     },
     {
         "title": "Mastering Back-End Languages: A Deep Dive",
-        "body": "Ready to level up your back-end skills? In this post, we'll take a deep dive into the world of back-end languages, exploring their inner workings and practical applications.",
+        "body": "Ready to level up your back-end skills? In this post, we'll take a deep dive into the world of back-end languages, exploring their inner workings and practical applications. Back-end languages, such as Python, Ruby, PHP, and Node.js, power the server-side of web development. They handle tasks like processing form data, querying databases, and generating dynamic content to be sent to the client's browser. Each back-end language has its strengths and weaknesses, as well as its own ecosystem of frameworks and libraries. For example, Python is known for its readability and versatility, while Node.js excels in building real-time, scalable applications. Understanding back-end languages is essential for building full-featured web applications, where data needs to be stored, processed, and retrieved from servers.",
         "user_id": 2
     },
     {
         "title": "The Importance of Responsive Web Design",
-        "body": "Responsive web design is crucial for creating websites that look great on any device. This article explores the importance of responsive design and how it can make your website more accessible.",
+        "body": "Responsive web design is crucial for creating websites that look great on any device. This article explores the importance of responsive design and how it can make your website more accessible. With the proliferation of smartphones, tablets, and other mobile devices, it's more important than ever to ensure your website is responsive. Responsive design allows your site to adapt to different screen sizes and orientations, providing a consistent user experience across all devices. By using techniques like flexible grids, fluid layouts, and media queries, you can create websites that automatically adjust their layout and content based on the device being used. In addition to improving the user experience, responsive design can also have SEO benefits, as search engines like Google prioritise mobile-friendly websites in their rankings.",
         "user_id": 3
     }, 
     {
         "title": "The Full-Stack Developer's Toolkit: A Comprehensive Guide",
-        "body": "Ready to become a master of both front-end and back-end development? In this post, we'll equip you with the tools and techniques you need to succeed as a full-stack developer. ",
+        "body": "Ready to become a master of both front-end and back-end development? In this post, we'll equip you with the tools and techniques you need to succeed as a full-stack developer. A full-stack developer is someone who is proficient in both front-end and back-end technologies, allowing them to build entire web applications from start to finish. In addition to mastering front-end languages like HTML, CSS, and JavaScript, a full-stack developer also needs to be proficient in back-end languages like Python, Ruby, PHP, or Node.js. Beyond programming languages, a full-stack developer's toolkit may include frameworks and libraries such as React, Angular, Vue.js, Django, Flask, Express.js, and many others. These tools help streamline development and provide solutions to common problems faced in web development.",
         "user_id": 4
 
     }, 
     {
         "title": "The Basics of Web Development: A Beginner's Guide",
-        "body": "In this article, we'll cover the basics of web development, from HTML to JavaScript, and how they work together to create interactive and responsive websites.",
+        "body": "In this article, we'll cover the basics of web development, from HTML to JavaScript, and how they work together to create interactive and responsive websites. Web development encompasses both front-end and back-end technologies, as well as the design and maintenance of websites. It's a multidisciplinary field that requires a diverse skill set, including programming, design, and problem-solving.HTML provides the structure of a web page, CSS adds style and layout, and JavaScript adds interactivity and dynamic behavior. Together, these technologies form the foundation of modern web development. As you delve deeper into web development, you'll encounter concepts like version control, responsive design, APIs (Application Programming Interfaces), and more. Mastering these concepts will help you become a proficient web developer capable of building a wide range of applications.",
         "user_id": 5
     }    
 ]
