@@ -11,8 +11,6 @@ router.get('/', async (req, res) => {
         {model : User, attributes: ['name']}, 
         {model: Comment}
       ],
-        // {model: User, attributes: ['name']},
-        // {model: Comment, attributes: ['id', 'content', 'user_id', 'date_created'], include: [{model: User, attributes: ['name']}]},
     });
 
     // Serialize data so the template can read it
@@ -39,7 +37,6 @@ router.get('/post/:id', async (req, res) => {
     });
 
     const post = postData.get({ plain: true });
-    // const postUser = post.user.get({ plain: true });
 
     res.render('post', {
       ...post,
