@@ -68,7 +68,15 @@ The aim of this project is to create a full stack application which is a tech bl
 
 **Below are images of the deployed application**
 
+![Screenshot 2024-05-04 at 17 01 54](https://github.com/e-aji/tech-blog-mvc/assets/156595423/0730ed6d-47f1-48be-9420-39e6e3101969)
 
+![Screenshot 2024-05-04 at 17 01 46](https://github.com/e-aji/tech-blog-mvc/assets/156595423/0a6ae535-eb59-448b-bce4-64ff069f12a4)
+
+![Screenshot 2024-05-04 at 17 02 09](https://github.com/e-aji/tech-blog-mvc/assets/156595423/d41cc8f0-a0e4-4577-87a0-dd8a0a9d4899)
+
+![Screenshot 2024-05-04 at 17 01 05](https://github.com/e-aji/tech-blog-mvc/assets/156595423/819e03a3-8bc8-45b7-89cd-ee958f5d5b56)
+
+![Screenshot 2024-05-04 at 17 01 14](https://github.com/e-aji/tech-blog-mvc/assets/156595423/06c589e6-9571-4e3e-8654-b4ea8b320bee)
 
 ## License 
 
