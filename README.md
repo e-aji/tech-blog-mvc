@@ -84,4 +84,4 @@ Licensed under the MIT license.
 
 ## Links 
 
-Link to deployed application - 
+Link to deployed application - https://tech-blog-mvc-u1o0.onrender.com 
